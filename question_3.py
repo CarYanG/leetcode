@@ -8,23 +8,28 @@ class Solution:
     # @param {string} s
     # @return {integer}
     def lengthOfLongestSubstring(self, s):
-        str=list(s)
-        temp=set()
-        max_len_sub=0
-        i=0
-        for item in str[i:]:
-            len_sub=0
-            if len(temp)!=len(temp.append(item)):
-                len_sub=len_sub+1
-            elif len_sub==len(str):
-                max_len_sub=len(str)
-                break
-            elif len(temp)==len(temp.append(item)):
-                max_len_sub=len_sub
-                i=i+1
+        str=list(s) # conver string to a list
+        max_len_sub=1 #set the lenght of longest substring
+        len_string=len(str)
 
+        for i in range (len_string):
+            if len_string-i>=max_len_sub:
+                temp=set(str[i:i+max_len_sub])
+                for item in str[i:]:
+                    curr_len=len(temp)
+                    if curr_len<max_len_sub:
+                        break
+                    if len(temp)>=len_string-str.index(item):
+                        return len(temp)
+                    temp.add(str[str.index(item)+max_len_sub])
+                    if curr_len==len(temp):
+                        max_len_sub=curr_len
+                        break
 
+        return max_len_sub
 
+s=Solution()
+print s.lengthOfLongestSubstring('avs')
 
 
 

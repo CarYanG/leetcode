@@ -1,4 +1,5 @@
 __author__ = 'carl'
+import sys
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -10,18 +11,42 @@ print type(a)
 a=ListNode(None)
 
 
-c = [2,1];
-print c.index(1)
-c.reverse()
-print "List : ", c
+str_lists=[[]for i in range (3)]
+print str_lists
 
-d='asdafaf'
-c=list(d)
+a='123'
+b='234'
+a=list(a)
+b=list(b)
+a.extend(b)
+print ''.join(a)
+print sys.maxint
+
+a=123
+c=list(str(a))
+c.reverse()
 print c
 
-e=(1,2,3,1)
-d=set()
-print d
-print len(d)
-print d.add(5)
-print d
+a='123'
+b=int(a)
+print type(b)
+print int('1')
+
+aa={}
+b=[1,1,1,1,1]
+for i in range(len(b)):
+    aa[i]=b[i]
+
+print aa
+print aa.keys()
+print len(aa.keys())
+
+a=[1,2,3]
+print a[0]
+
+
+
+
+
+
+
