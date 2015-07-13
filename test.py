@@ -41,9 +41,16 @@ print aa
 print aa.keys()
 print len(aa.keys())
 
-a=[1,2,3]
+a=[1,5,3]
+a.reverse()
+print a
 print a[0]
 print max(a),min(a)
+
+s='   as  ada   dasd'
+print s.strip()
+ss=s.strip().split(" ")
+print ss
 
 
 

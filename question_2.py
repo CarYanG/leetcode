@@ -54,8 +54,8 @@ class Solution:
         return resultList
 
 
-a=ListNode(0)
-b=ListNode(0)
+a=ListNode(1)
+b=ListNode(22)
 
 s=Solution()
 print s.addTwoNumbers(a,b).val
