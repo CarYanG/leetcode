@@ -52,6 +52,9 @@ print s.strip()
 ss=s.strip().split(" ")
 print ss
 
+del a[0]
+print a
+
 
 
 
