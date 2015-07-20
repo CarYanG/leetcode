@@ -28,34 +28,26 @@ class Solution:
     def reverseKGroup(self, head, k):
         node_list=[]
         while head:
-            node_list.extend(head.val)
+            node_list.append(head.val)
             head=head.next
 
         if len(node_list)==0:
             return []
-
         else:
             modified_node_list=[]
             a=len(node_list)/k
             b=len(node_list)%k
             for i in range(a):
                 temp_list=[]
-                for i in range(k):
-                    temp_list.append(node_list[i*a])
+                for j in range(k):
+                    temp_list.append(node_list[i*k+j])
                 temp_list.reverse()
                 modified_node_list.extend(temp_list)
             for i in range(b):
-                modified_node_list.append(node_list[k*a]+i)
+                modified_node_list.append(node_list[k*a+i])
 
             print modified_node_list
-            modified_node_list.reverse()
-            resultList=ListNode(modified_node_list[0])
-
-            for item in modified_node_list[1:]:
-                p=ListNode(item)
-                p.next=resultList
-                resultList=p
-            return resultList
+            return modified_node_list
 
 s=Solution()
 test=[5,4,3,2,1]
